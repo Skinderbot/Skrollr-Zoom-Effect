@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Recreate iPhone X Webpage effect</title>
+	<link href="css/fixed-positioning.css" rel="stylesheet" type="text/css" />
+	<link href="css/main.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+<div style="position: fixed; z-index: 10000; width: 100%; box-shadow: 0px 0px 8px 2px #000000; background: rgba(255,255,255,.5)" >
+      <h1>Scroll down to see the effect</h1>
+    </div>
+<div class="phone" id="transform-small" data-000="opacity:1; transform:scale(3);" data-1000="transform:scale(1);" data-1050="top:0%" data-1270="top:-100%">
+      <video id="my-video" style=" position: absolute; left: 50%; top:50%; transform: translate(-50%, -50%)" autoplay muted loop>
+    <source src="media/cameravideo.mp4" type="video/mp4">
+  </video>
+    </div>
+<div class="cross" id="transform-big" data-0="transform:scale(1.5);" data-1000="transform:scale(6.8);opacity: 1;" data-1001="opacity: 0;"> </div>
+<div id="properties" data-1020="top:85%;" data-1320="top:0%;" data-1800="display:block;" data-3000="top:-100%;display:none;">
+      <h2>iPhone X</h2>
+      <p>Our vision has always been to create an iPhone that is entirely screen. One so immersive the device itself disappears into the experience. And so intelligent it can respond to a tap, your voice, and even a glance. With iPhone X, that vision is now a reality. Say hello to the future.</p>
+    </div>
+<script type="text/javascript" src="js/skrollr.min.js"></script> 
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="../skrollr-ie/dist/skrollr.ie.min.js"></script>
+	<![endif]--> 
+<script type="text/javascript">
+	var s = skrollr.init({
+		edgeStrategy: 'set',
+		easing: {
+			WTF: Math.random,
+			inverted: function(p) {
+				return 1-p;
+			}
+		}
+	});
+	</script>
+</body>
+</html>
